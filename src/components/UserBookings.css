@@ -1,0 +1,61 @@
+.view-complaints {
+  min-height: 100vh;
+  width: 100vw;
+  padding-top: 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: transparent;
+  font-family: Arial, sans-serif;
+}
+
+
+.view-complaints h2 {
+  color: #ffd700;
+  margin-bottom: 30px;
+  font-size: 26px;
+}
+
+
+.view-complaints p {
+  color: white;
+  font-size: 16px;
+}
+
+
+.complaint-card {
+  width: 100%;
+  max-width: 500px;
+
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.complaint-card b {
+  color: #ffd700;
+}
+
+
+.complaint-card p:last-child {
+  font-weight: bold;
+}
+
+.complaint-card p:last-child span.pending {
+  color: orange;
+}
+
+.complaint-card p:last-child span.resolved {
+  color: lightgreen;
+}
