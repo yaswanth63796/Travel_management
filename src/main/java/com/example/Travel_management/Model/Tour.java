@@ -1,8 +1,6 @@
 package com.example.Travel_management.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,7 +17,8 @@ public class Tour {
 
 
      @Id
-     private int package_id;
+     @GeneratedValue(strategy = GenerationType.IDENTITY)
+     private Integer package_id;
      private  String name;
      private String destination;
      private String descripiton;

@@ -10,23 +10,22 @@ import java.util.List;
 
 @RestController
 public class BookingController {
+
     @Autowired
     BookingService s;
-     @PostMapping("/api/user/add/{package_id}")
-    public Booking addbook(@PathVariable int package_id, @RequestParam int userid,@RequestParam int noOfPersons){
-        return s.addbook(package_id,userid,noOfPersons);
+
+    @PostMapping("/api/user/add/{package_id}")
+    public Booking addbook(@PathVariable int package_id, @RequestParam int userid, @RequestParam int noOfPersons) {
+        return s.addbook(package_id, userid, noOfPersons);
     }
 
-
-
-    @GetMapping("/api/user/getbooks")
-
-    public List<Booking>getallbooking(){
+    @GetMapping("/api/admin/getbooks")
+    public List<Booking> getallbooking() {
         return s.getallbooks();
     }
 
-    @GetMapping("api/user/getbooks/{userid}")
-    public List<Booking>getbookbyuser(@PathVariable Long userid){
-         return s.getbookbyuser(userid);
+    @GetMapping("/api/user/getbooks/{userid}")
+    public List<Booking> getbookbyuser(@PathVariable Long userid) {
+        return s.getbookbyuser(userid);
     }
 }
