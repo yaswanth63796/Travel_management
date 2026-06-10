@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 
-
+@CrossOrigin(origins = "*")
 public class TourController {
 
 
