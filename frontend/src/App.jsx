@@ -54,9 +54,9 @@ function App() {
 
   return (
     <TravelContextProvider>
-      <div className="app-layout">
-        <Navbar user={user} setUser={setUser} />
-        <div className="main-content">
+      <div className={user ? "app-layout" : "app-layout-full"}>
+        {user && <Navbar user={user} setUser={setUser} />}
+        <div className={user ? "main-content" : "main-content-full"}>
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/login" element={<Login setUser={setUser} />} />
