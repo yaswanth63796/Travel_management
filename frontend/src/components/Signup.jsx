@@ -51,7 +51,7 @@ const Signup = () => {
 
                 <select value={role} onChange={(e) => setRole(e.target.value)} required style={{ width: "100%", padding: "10px", margin: "10px 0", borderRadius: "5px", border: "1px solid #ccc" }}>
                     <option value="USER">USER</option>
-                    <option value="ADMIN">ADMIN</option>
+                    
                 </select>
 
                 <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
