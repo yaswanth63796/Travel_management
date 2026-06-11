@@ -24,20 +24,21 @@ public class UserController {
         return s.adduser(user);
     }
 
+    @PostMapping("/api/public/login")
+    public String loginuser(@RequestBody User user) {
+        return s.login(user);
+    }
+
+    // Returns the current logged-in user's id and role from the DB using JWT
     @GetMapping("/api/user/me")
     public Map<String, Object> getCurrentUser(@AuthenticationPrincipal UserDetails userDetails) {
-        Map<String, Object> map = new HashMap<>();
-
-        if (userDetails != null) {
-            String email = userDetails.getUsername();
-            map.put("email", email);
-            User user = userRepo.findByemail(email);
-            if (user != null) {
-                map.put("id", user.getId());
-                map.put("name", user.getName());
-                map.put("role", user.getRole());
-            }
-        }
-        return map;
+        User user = userRepo.findByemail(userDetails.getUsername());
+        Map<String, Object> result = new HashMap<>();
+        result.put("id",    user.getId());
+        result.put("role",  user.getRole());
+        result.put("email", user.getEmail());
+        result.put("name",  user.getName());
+        return result;
     }
 }
+
