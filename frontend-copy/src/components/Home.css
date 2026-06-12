@@ -1,0 +1,260 @@
+/* ─── Reset ─────────────────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ─── Home wrapper ─────────────────────────────────────── */
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  /* hero background */
+  background-image: url("https://images.unsplash.com/photo-1637066742971-726bee8d9f56?q=80&w=1249&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.home-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(10, 10, 30, 0.60) 100%
+  );
+  z-index: 0;
+}
+
+/* ─── Header ───────────────────────────────────────────── */
+.home-header {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 60px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.home-logo {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ffd700;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+.home-header-actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+/* Shared button base */
+.btn-header {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 10px 28px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+/* Login — ghost style */
+.btn-login {
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  background: transparent;
+}
+.btn-login:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Sign Up — gold filled */
+.btn-signup {
+  color: #000;
+  background: #ffd700;
+  border: 1.5px solid #ffd700;
+  box-shadow: 0 4px 18px rgba(255, 215, 0, 0.35);
+}
+.btn-signup:hover {
+  background: #ffe438;
+  box-shadow: 0 6px 24px rgba(255, 215, 0, 0.55);
+  transform: translateY(-2px);
+  color: #000;
+}
+
+/* ─── Hero Content ─────────────────────────────────────── */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+  padding: 0 24px;
+  gap: 22px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 215, 0, 0.15);
+  border: 1px solid rgba(255, 215, 0, 0.4);
+  color: #ffd700;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 7px 20px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  backdrop-filter: blur(4px);
+}
+
+.hero-title {
+  font-size: clamp(42px, 7vw, 80px);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hero-highlight {
+  background: linear-gradient(90deg, #ffd700, #ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: clamp(15px, 2vw, 20px);
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* ─── CTA Buttons ───────────────────────────────────────── */
+.hero-cta-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.cta-primary {
+  text-decoration: none;
+  background: linear-gradient(135deg, #ffd700, #ffb347);
+  color: #111;
+  font-size: 15px;
+  font-weight: 800;
+  padding: 14px 38px;
+  border-radius: 50px;
+  box-shadow: 0 6px 24px rgba(255, 215, 0, 0.4);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.cta-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 32px rgba(255, 215, 0, 0.55);
+  color: #111;
+}
+
+.cta-secondary {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 36px;
+  border-radius: 50px;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+.cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* ─── Stats ─────────────────────────────────────────────── */
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  padding: 16px 40px;
+  border-radius: 60px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.stat-number {
+  font-size: 26px;
+  font-weight: 900;
+  color: #ffd700;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ─── Responsive ───────────────────────────────────────── */
+@media (max-width: 600px) {
+  .home-header {
+    padding: 16px 24px;
+  }
+  .home-logo {
+    font-size: 16px;
+  }
+  .hero-stats {
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 20px;
+  }
+  .stat-divider {
+    width: 60px;
+    height: 1px;
+  }
+}

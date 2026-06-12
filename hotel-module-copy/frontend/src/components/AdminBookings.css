@@ -1,0 +1,98 @@
+.customer-bookings-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 60px 60px;
+  box-sizing: border-box;
+  background: transparent;
+  font-family: Arial, sans-serif;
+}
+
+.cb-title {
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+
+.cb-empty {
+  color: #aaa;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+/* ── Card Grid — same 2-column look as admin dashboard right panel ── */
+.cb-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cb-card {
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cb-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: #ffd700;
+  transform: translateY(-2px);
+}
+
+/* Gold heading with bottom separator — matches screenshot */
+.cb-card-heading {
+  color: #ffd700;
+  font-size: 17px;
+  margin: 0 0 12px 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.25);
+}
+
+.cb-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cb-card-body p {
+  margin: 0;
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+.cb-card-body b {
+  color: #9ca3af;
+}
+
+/* Green amount — matches screenshot */
+.cb-amount {
+  color: #34d399;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Status colours — matches screenshot */
+.cb-status {
+  font-weight: bold;
+}
+
+.cb-status.confirmed {
+  color: #34d399;
+}
+
+.cb-status.cancelled {
+  color: #ef4444;
+}
+
+@media (max-width: 768px) {
+  .customer-bookings-page {
+    padding: 60px 20px 40px;
+  }
+}
