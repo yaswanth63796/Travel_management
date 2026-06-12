@@ -1,0 +1,12 @@
+node_modules/
+dist/
+dist-ssr/
+*.local
+target/
+*.class
+*.jar
+*.war
+*.log
+.DS_Store
+.idea/
+.vscode/
